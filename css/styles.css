@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Montserat", sans-serif;
+    font-size: 20px;
+    color: #444;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.content {
+    position: relative;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 1rem 2rem;
+    width: 100%;
+    background-color: #21cee1;
+    user-select: none;
+}
+
+header img {
+    height: 1.5rem;
+}
+
+header nav {
+    float: right;
+    position: relative;
+    top: 5px;
+}
+
+header nav li {
+    display: inline-block;
+    margin-right: 60px;
+}
+
+header nav li:last-child {
+    margin-right: 0;
+}
+
+a.btn {
+    padding: 10px 20px;
+    border: 2px solid #f73e12;
+    border-radius: 1.5rem;
+    background-color: transparent;
+    color: #f73e12;
+}
+
+a:hover {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+/* hero */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 900px;
+    height: 90vh;
+    padding-top: 5rem;
+
+    background: #21cee1 url(../img/hero.png);
+    background-repeat: no-repeat;
+    background-position: bottom -2px right -10px;
+    background-attachment: scroll;
+    background-size: auto 90%;
+}
+
+.hero-text {
+    width: 50%;
+    padding-left: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.5;
+    color: #666;
+}
+
+
+/* main */
+section {
+    position: relative;
+    padding: 4rem 2rem 2rem;
+}
+
+section h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+section p {
+    width: 85%;
+    margin: 20px auto;
+}
+
+section.hero p {
+    margin-left: 0;
+}
+
+.three-col {
+    padding: 2rem;
+    text-align: center;
+}
+
+.three-col > * {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+.three-col img {
+    width: 70px;
+}
+
+.three-col h4 {
+    margin: 1rem 0;
+}
+
+.three-col p {
+    width: 90%;
+    min-width: auto;
+}
+
+.two-col > * {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    min-width: 300px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#courses {
+    position: relative;
+    background-color: #eee;
+    padding: 0;
+
+    display: table;
+}
+
+#courses > * {
+    text-align: left;
+    display: table-cell;
+}
+
+#courses > div:last-child {
+    background-color: #333;
+    /* vertical-align: middle; */
+}
+
+#courses > *:first-child article {
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+#courses > *:last-child article:nth-child(2n+1) {
+    background-color: #555;
+}
+
+#courses h3 {
+    text-align: left;
+}
+
+#courses p {
+    width: 100%;
+    min-width: auto;
+}
+
+.course {
+    position: relative;
+    padding: 1rem 2rem 1rem 1rem;
+    min-height: 100px;
+}
+
+.course.subcourse {
+    margin-left: 2rem;
+}
+
+.course:after { content: ''; clear: both; visibility: hidden; }
+
+.course img {
+    float: left;
+    width: 125px;
+    margin-right: 1rem;
+}
+
+.course h3 {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    color: #eee;
+}
+
+.course hr {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.301);
+    border: 0;
+}
+
+.course .info {
+    margin-top: 1rem;
+}
+
+.course .info span {
+    display: inline-block;
+    margin-right: 20px;
+    color: #eee;
+    font-size: .9rem;
+}
+
+.course .info img {
+    width: .9rem;
+}
+
+.course p {
+    font-size: .8rem;
+    color: #ddd;
+}
+
+
+/* form */
+#contactus p {
+    width: 91%;
+    text-align: center;
+}
+
+#contactus > div {
+    width: 91%;
+    max-width: 900px;
+    margin: 4rem auto 0;
+    text-align: center;
+}
+
+.msg {
+    font-size: 1.2rem;
+    color: #21cee1;
+    clear: both;
+}
+
+.msg img {
+    width: 300px;
+    float: left;
+}
+
+.details {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.details p {
+    width: auto !important;
+}
+
+form {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input, textarea {
+    padding: .8rem;
+    font-size: 1rem;
+    border-radius:4px;
+    border: 1px solid;
+}
+
+input:focus, textarea:focus {
+    border-color: #21cee1;
+    outline: 0;
+}
+
+input {
+    width: 30%;
+    
+}
+
+textarea {
+    width: 91%;
+    height: 10rem;
+}
+
+form button {
+    padding: .8rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #21cee1;
+    border-radius: 4px;
+    color: #21cee1;
+    background-color: transparent;
+}
+
+form button:hover {
+    color: #fff;
+    background-color: #21cee1;
+}
+
+
+
+footer {
+    padding: 4rem 2rem 2rem;
+    text-align: center;
+    opacity: .5;
+}
+
+
+@media screen and (max-width: 768px) {
+    header img {
+        height: 15px;
+    }
+
+    header nav li {
+        margin-right: 0;
+    }
+
+    header li a:not(.btn) {
+        display: none;
+    }
+
+    header .btn {
+        font-size: .9rem;
+    }
+
+    /* hero */
+    .hero {
+        background-size: 100% auto;
+    }
+
+    .hero-text {
+        position: relative;
+        top: 0;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        transform: none;
+    }
+
+    section p {
+        width : 100%;
+    }
+
+    #courses > * {
+        display: block;
+    }
+
+    .two-col > * {
+        width: 100%;
+    }
+
+    .three-col > * {
+        width: 80%;
+        margin-top: 2rem;
+    }
+
+    form input {
+        display: inline-block;
+        width: 91%;
+        margin: 1rem auto;
+    }
+
+    .msg img {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
