@@ -2,6 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* font-size: 1rem; */
+}
+
+:target:before {
+    content:' ';
+    display: block;
+    height: 4rem;
 }
 
 html, body {
@@ -10,6 +17,7 @@ html, body {
     font-family: "Montserat", sans-serif;
     font-size: 20px;
     color: #444;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -56,7 +64,7 @@ header nav li:last-child {
 }
 
 a.btn {
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     border: 2px solid #f73e12;
     border-radius: 1.5rem;
     background-color: transparent;
@@ -163,27 +171,33 @@ section.hero p {
 
 #courses {
     position: relative;
-    background-color: #eee;
     padding: 0;
+}
 
+#courses > div {
     display: table;
 }
 
-#courses > * {
+#courses > div > * {
     text-align: left;
     display: table-cell;
 }
 
-#courses > div:last-child {
+#courses > div > div:first-child {
+    background-color: #eee;
+    /* vertical-align: middle; */
+}
+
+#courses > div > div:last-child {
     background-color: #333;
     /* vertical-align: middle; */
 }
 
-#courses > *:first-child article {
+#courses > div > *:first-child article {
     padding: 1rem 1rem 1rem 2rem;
 }
 
-#courses > *:last-child article:nth-child(2n+1) {
+#courses > div > *:last-child article:nth-child(2n+1) {
     background-color: #555;
 }
 
@@ -235,6 +249,11 @@ section.hero p {
     margin-right: 20px;
     color: #eee;
     font-size: .9rem;
+}
+
+.course .info .right-align {
+    float: right;
+    color: #ff9f41;
 }
 
 .course .info img {
@@ -334,6 +353,10 @@ footer {
 
 
 @media screen and (max-width: 768px) {
+    header {
+        line-height: 0.3;
+    }
+
     header img {
         height: 15px;
     }
@@ -369,12 +392,20 @@ footer {
         width : 100%;
     }
 
-    #courses > * {
+    #courses > div > * {
         display: block;
+    }
+
+    #courses article {
+        padding: 1.3rem !important;
     }
 
     .two-col > * {
         width: 100%;
+    }
+
+    .three-col {
+        padding: 2rem 0;
     }
 
     .three-col > * {
@@ -392,6 +423,16 @@ footer {
         float: none;
         display: block;
         margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .course .info {
+        text-align: center;
+    }
+    .course .info .right-align {
+        float: none;
+        margin-top: 1rem;       
     }
 }
 
